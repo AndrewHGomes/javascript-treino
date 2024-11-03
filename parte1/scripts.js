@@ -111,3 +111,25 @@ operacoes.addEventListener("click", () => {
 
   exercicio2[1].append(resultado);
 });
+
+// ==============================================================
+
+const calcular = document.querySelector("#calcular");
+
+calcular.addEventListener("click", () => {
+  const exercicio3 = document.getElementsByTagName("section");
+
+  const base = document.querySelector("#base").value;
+  const altura = document.querySelector("#altura").value;
+
+  const area = (base * altura) / 2;
+
+  const mostrar = document.createElement("p");
+  mostrar.textContent = `Num triângulo de base ${base} e altura ${altura}, a área é ${area}.`;
+
+  const resultado = document.createElement("div");
+  resultado.setAttribute("class", "resultado");
+
+  resultado.append(mostrar);
+  exercicio3[2].append(resultado);
+});

@@ -34,12 +34,12 @@ section {
   justify-content: space-evenly;
 }
 
-#ex1 {
+.impar {
   background-color: #fff;
   color: #123;
 }
 
-#ex2 {
+.par {
   background-color: #123;
   color: #fff;
 }
@@ -67,23 +67,23 @@ button {
   transition: 0.5s;
 }
 
-#ex1 button {
+.impar button {
   background-color: #123;
   color: #fff;
 }
 
-#ex1 button:hover {
+.impar button:hover {
   background-color: #fff;
   color: #123;
   border-color: #123;
 }
 
-#ex2 button {
+.par button {
   background-color: #fff;
   color: #123;
 }
 
-#ex2 button:hover {
+.par button:hover {
   background-color: #123;
   color: #fff;
   border-color: #fff;
