@@ -114,9 +114,9 @@ operacoes.addEventListener("click", () => {
 
 // ==============================================================
 
-const calcular = document.querySelector("#calcular");
+const btnArea = document.querySelector("#btn-area");
 
-calcular.addEventListener("click", () => {
+btnArea.addEventListener("click", () => {
   const exercicio3 = document.getElementsByTagName("section");
 
   const base = document.querySelector("#base").value;
@@ -132,4 +132,31 @@ calcular.addEventListener("click", () => {
 
   resultado.append(mostrar);
   exercicio3[2].append(resultado);
+});
+
+// ==============================================================
+
+const btnDesconto = document.querySelector("#btn-desconto");
+
+btnDesconto.addEventListener("click", () => {
+  const exercicio4 = document.getElementsByTagName("section");
+
+  const valor = Number(document.querySelector("#valor").value);
+  const desconto = Number(document.querySelector("#desconto").value);
+  const comDesconto = valor - (valor * desconto) / 100;
+
+  const mostrar1 = document.createElement("p");
+  mostrar1.textContent = `Valor total: R$${valor.toFixed(2)}`;
+
+  const mostrar2 = document.createElement("p");
+  mostrar2.textContent = `Desconto: ${desconto}%`;
+
+  const mostrar3 = document.createElement("p");
+  mostrar3.textContent = `Valor a pagar: R$${comDesconto.toFixed(2)}`;
+
+  const resultado = document.createElement("div");
+  resultado.setAttribute("class", "resultado");
+
+  resultado.append(mostrar1, mostrar2, mostrar3);
+  exercicio4[3].append(resultado);
 });
